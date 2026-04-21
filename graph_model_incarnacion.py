@@ -1,4 +1,4 @@
-from graph_config import connections, nodes
+from graph_config_osm import connections, nodes
 from threading import Semaphore
 import networkx as nx
 
