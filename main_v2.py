@@ -1,4 +1,4 @@
-from graph_model_incarnacion import generate_graph, show_data
+from graph_model import generate_graph, show_data
 from vehiculos import Vehiculo
 from threading import Thread, Lock, Event
 from queue import Queue, Empty
