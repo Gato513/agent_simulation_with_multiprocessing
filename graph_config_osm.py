@@ -25,7 +25,6 @@ nodes = [
     ("Av. Perimetral",                                                  {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
     ("Av. Perimetral (2)",                                              {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
     ("Av. Perimetral y Don Carlos González Arias",                      {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
-    ("Av. San Roque",                                                   {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
     ("Av. San Roque (2)",                                               {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
     ("Av. San Roque (3)",                                               {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
     ("Av. San Roque (4)",                                               {"semaforo": True , "zona": "comercial",   "vp": 0, "capacidad": 4},),
@@ -123,7 +122,6 @@ nodes = [
     ("Tte. Arzamendia Samaniego (2)",                                   {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("Vía 1",                                                           {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84467, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
-    ("nodo_(-55.84488, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84506, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84541, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84673, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
@@ -140,11 +138,9 @@ nodes = [
     ("nodo_(-55.84862, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84887, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84925, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
-    ("nodo_(-55.84946, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.84961, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.8503, -",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.85042, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
-    ("nodo_(-55.85045, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.85138, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.85173, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
     ("nodo_(-55.85182, ",                                               {"semaforo": False, "zona": "residencial", "vp": 0, "capacidad": 2},),
@@ -170,7 +166,6 @@ node_position = {
     'Av. Perimetral'                                                   : (  0.19827287,   1.00000000),
     'Av. Perimetral (2)'                                               : (  0.42899399,   0.77556987),
     'Av. Perimetral y Don Carlos González Arias'                       : (  0.33363442,   0.89357893),
-    'Av. San Roque'                                                    : ( -0.15467765,   0.03230658),
     'Av. San Roque (2)'                                                : ( -0.18640131,   0.21589272), 
     'Av. San Roque (3)'                                                : ( -0.45777954,  -0.54749597),
     'Av. San Roque (4)'                                                : ( -0.30273463,  -0.29777138),
@@ -268,7 +263,6 @@ node_position = {
     'Tte. Arzamendia Samaniego (2)'                                    : ( -0.59529505,  -0.12992543),
     'Vía 1'                                                            : ( -0.69922081,  -0.79965681),
     'nodo_(-55.84467, '                                                : (  1.00000000,   0.45269469),
-    'nodo_(-55.84488, '                                                : (  0.95884659,  -0.44610626),
     'nodo_(-55.84506, '                                                : (  0.92168346,  -0.77948903),
     'nodo_(-55.84541, '                                                : (  0.85263785,  -0.88742479),
     'nodo_(-55.84673, '                                                : (  0.59092759,  -0.86075333),
@@ -285,11 +279,9 @@ node_position = {
     'nodo_(-55.84862, '                                                : (  0.21679488,   0.74608084),
     'nodo_(-55.84887, '                                                : (  0.16585438,   0.58056521),
     'nodo_(-55.84925, '                                                : (  0.08984069,   0.82041776),
-    'nodo_(-55.84946, '                                                : (  0.04989826,  -0.74586899),
     'nodo_(-55.84961, '                                                : (  0.01970321,   0.80539785),
     'nodo_(-55.8503, -'                                                : ( -0.11735570,  -0.06128718),
     'nodo_(-55.85042, '                                                : ( -0.14131719,   0.25800780),
-    'nodo_(-55.85045, '                                                : ( -0.14723311,  -0.92769681),
     'nodo_(-55.85138, '                                                : ( -0.33265174,  -0.28294212),
     'nodo_(-55.85173, '                                                : ( -0.40185617,  -0.91784595),
     'nodo_(-55.85182, '                                                : ( -0.41946499,  -0.88500974),
@@ -524,10 +516,6 @@ connections = [
         {"vel_max": 60, "carriles": 2, "vehi_calle": 0, "weight": 76}
     ],
     [
-        "Av. Moisés Bertoni (2)", "Av. Moisés Bertoni (4)", 
-        {"vel_max": 60, "carriles": 2, "vehi_calle": 0, "weight": 87}
-    ],
-    [
         "Av. Moisés Bertoni (2)", "Av. Moisés Bertoni (7)", 
         {"vel_max": 60, "carriles": 2, "vehi_calle": 0, "weight": 23}
     ],
@@ -542,10 +530,6 @@ connections = [
     [
         "Av. Moisés Bertoni (3)", "Prof. Clementina Irrazabal Barboza (3)", 
         {"vel_max": 20, "carriles": 1, "vehi_calle": 0, "weight": 112}
-    ],
-    [
-        "Av. Moisés Bertoni (4)", "Ab. Mercedes Sandoval y Av. Moisés Bertoni", 
-        {"vel_max": 60, "carriles": 2, "vehi_calle": 0, "weight": 86}
     ],
     [
         "Av. Moisés Bertoni (4)", "Av. Moisés Bertoni (3)", 
@@ -606,10 +590,6 @@ connections = [
     [
         "Av. Padre Juan Von Winckel", "Av. Padre Juan Von Winckel (5)", 
         {"vel_max": 50, "carriles": 1, "vehi_calle": 0, "weight": 328}
-    ],
-    [
-        "Av. Padre Juan Von Winckel", "nodo_(-55.84488, ", 
-        {"vel_max": 30, "carriles": 1, "vehi_calle": 0, "weight": 146}
     ],
     [
         "Av. Padre Juan Von Winckel (2)", "Av. Padre Juan Von Winckel", 
@@ -680,7 +660,7 @@ connections = [
         {"vel_max": 60, "carriles": 2, "vehi_calle": 0, "weight": 78}
     ],
     [
-        "Av. San Roque", "Av. San Roque y Próceres de Mayo", 
+        "Rot. San Roque González", "Av. San Roque y Próceres de Mayo", 
         {"vel_max": 80, "carriles": 2, "vehi_calle": 0, "weight": 92}
     ],
     [
