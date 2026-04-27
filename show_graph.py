@@ -2,18 +2,18 @@
 show_graph.py — Visualizador del Circuito Comercial de Encarnación
 ==================================================================
 Modos de uso:
-  python show_graph.py              → panel doble: grafo + superposición
-  python show_graph.py --solo       → solo el grafo (sin imagen)
-  python show_graph.py --overlay    → solo superposición sobre imagen
-  python show_graph.py --info       → estadísticas en consola
+    python show_graph.py              → panel doble: grafo + superposición
+    python show_graph.py --solo       → solo el grafo (sin imagen)
+    python show_graph.py --overlay    → solo superposición sobre imagen
+    python show_graph.py --info       → estadísticas en consola
 
 Interactividad:
-  Click izquierdo sobre un nodo  → muestra nombre y atributos
-  Click derecho                  → cierra el tooltip
+    Click izquierdo sobre un nodo  → muestra nombre y atributos
+    Click derecho                  → cierra el tooltip
 
 Requiere en el mismo directorio:
-  graph_config.py
-  nueva_represetacion_morfologia_urbana.png
+    graph_config.py
+    nueva_represetacion_morfologia_urbana.png
 """
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -45,8 +45,7 @@ for _b in _CANDIDATES:
         break
     except Exception as _e:
         # Limpiar completamente matplotlib para el siguiente intento
-        _mods = [k for k in sys.modules
-                 if k == "matplotlib" or k.startswith("matplotlib.")]
+        _mods = [k for k in sys.modules if k == "matplotlib" or k.startswith("matplotlib.")]
         for _k in _mods:
             del sys.modules[_k]
         import matplotlib  # reimportar el núcleo limpio
@@ -77,7 +76,7 @@ except ImportError:
     PIL_AVAILABLE = False
 
 try:
-    from graph_config_osm import nodes, node_position, connections
+    from graph_config_osm import nodes, connections
 except ImportError:
     print("ERROR: No se encontró graph_config.py")
     sys.exit(1)
@@ -206,9 +205,9 @@ class NodePicker:
     def _make_text(self, label):
         d    = self.G.nodes.get(label, {})
         zona = d.get("zona", "—")
-        sf   = "Sí" if d.get("tiene_semaforo") else "No"
+        sf   = "Sí" if d.get("semaforo") else "No"
         cap  = d.get("capacidad", "—")
-        vp   = d.get("vehi_presentes", 0)
+        vp   = d.get("vp", 0)
         din  = self.G.in_degree(label)  if self.G.is_directed() else self.G.degree(label)
         dout = self.G.out_degree(label) if self.G.is_directed() else "—"
         name = label if len(label) <= 46 else label[:43] + "…"
@@ -241,7 +240,7 @@ class NodePicker:
         span   = max(abs(xl[1]-xl[0]), abs(yl[1]-yl[0]))
         r      = span * 0.018
 
-        ring = plt.Circle(
+        ring = mpatches.Circle(
             (x, y), r,
             fill=False, edgecolor=ACCENT,
             linewidth=2.5, zorder=15, alpha=0.95,
@@ -393,16 +392,16 @@ def draw_stats(ax, G, compact=False):
     from collections import Counter
     zonas = Counter(d.get("zona","?") for _,d in G.nodes(data=True))
     lines = (
-        [f"  Nodos:   {G.number_of_nodes()}",
-         f"  Aristas: {G.number_of_edges()}",
-         "  ──────────────"] +
+        [f"  Nodos:   {G.number_of_nodes()}", f"  Aristas: {G.number_of_edges()}",
+        "  ──────────────"] +
         [f"  {z}: {c}" for z,c in sorted(zonas.items())]
     )
     ax.text(0.01, 0.99, "\n".join(lines),
             transform=ax.transAxes, va="top", ha="left",
             fontsize=6 if compact else 7, family="monospace", color=TEXT_CLR,
             bbox=dict(boxstyle="round,pad=0.4", facecolor="#1a1e2e",
-                      edgecolor=MUTED, alpha=0.92))
+            edgecolor=MUTED, alpha=0.92)
+        )
 
 def draw_hint(target, compact=False, use_fig=False):
     fs  = 6 if compact else 7
@@ -445,12 +444,12 @@ def mode_solo(G, pos):
     draw_stats(ax, G)
     draw_hint(ax)
     ax.set_title("CIRCUITO COMERCIAL — ENCARNACIÓN",
-                 color=ACCENT, fontsize=14, fontweight="bold",
-                 fontfamily="monospace", pad=14,
-                 path_effects=[pe.withStroke(linewidth=3, foreground=DARK_BG)])
+                color=ACCENT, fontsize=14, fontweight="bold",
+                fontfamily="monospace", pad=14,
+                path_effects=[pe.withStroke(linewidth=3, foreground=DARK_BG)])
     ax.axis("off")
     plt.tight_layout(pad=1.5)
-    fig._picker = NodePicker(ax, G, pos, radius=0.07)
+    fig._picker = NodePicker(ax, G, pos, radius=0.07) # type: ignore
     plt.show()
 
 
@@ -463,7 +462,7 @@ def mode_overlay(G, pos):
 
     fig, ax = plt.subplots(figsize=(14, 14))
     fig.patch.set_facecolor(DARK_BG)
-    ax.imshow(img, extent=[0, w, h, 0], aspect="equal", alpha=0.50)
+    ax.imshow(img, extent=[0, w, h, 0], aspect="equal", alpha=0.50) # type: ignore
     draw_graph_on_ax(ax, G, ipos, bg="none", alpha=0.92)
     draw_legend(ax, compact=True)
     draw_stats(ax, G, compact=True)
@@ -471,11 +470,11 @@ def mode_overlay(G, pos):
     ax.set_xlim(0, w); ax.set_ylim(h, 0)
     ax.set_facecolor(DARK_BG)
     ax.set_title("CIRCUITO COMERCIAL — SUPERPOSICIÓN",
-                 color=ACCENT, fontsize=12, fontweight="bold",
-                 fontfamily="monospace", pad=12)
+                color=ACCENT, fontsize=12, fontweight="bold",
+                fontfamily="monospace", pad=12)
     ax.axis("off")
     plt.tight_layout(pad=1.0)
-    fig._picker = NodePicker(ax, G, ipos, radius=0.05)
+    fig._picker = NodePicker(ax, G, ipos, radius=0.05) # type: ignore
     plt.show()
 
 
@@ -495,23 +494,28 @@ def mode_dual(G, pos):
     draw_legend(ax_l, compact=True)
     draw_stats(ax_l, G, compact=True)
     ax_l.set_title("GRAFO  ·  COORDENADAS NORMALIZADAS",
-                   color=ACCENT, fontsize=10, fontweight="bold",
-                   fontfamily="monospace", pad=10,
-                   path_effects=[pe.withStroke(linewidth=2, foreground=DARK_BG)])
+                color=ACCENT, fontsize=10, fontweight="bold",
+                fontfamily="monospace", pad=10,
+                path_effects=[pe.withStroke(linewidth=2, foreground=DARK_BG)]
+            )
     ax_l.axis("off")
 
     # Panel derecho — superposición
     ax_r = fig.add_subplot(1, 2, 2)
     ax_r.set_facecolor(DARK_BG)
-    ax_r.imshow(img, extent=[0, w, h, 0], aspect="equal", alpha=0.50)
+    ax_r.imshow(img, extent=[0, w, h, 0], aspect="equal", alpha=0.50) # type: ignore
     draw_graph_on_ax(ax_r, G, ipos, bg="none", alpha=0.92)
     ax_r.set_xlim(0, w); ax_r.set_ylim(h, 0)
-    ax_r.set_title("SUPERPOSICIÓN  ·  IMAGEN DE REFERENCIA",
-                   color=ACCENT, fontsize=10, fontweight="bold",
-                   fontfamily="monospace", pad=10)
+    ax_r.set_title(
+                "SUPERPOSICIÓN  ·  IMAGEN DE REFERENCIA",
+                color=ACCENT, 
+                fontsize=10, 
+                fontweight="bold",
+                fontfamily="monospace", pad=10
+            )
     ax_r.axis("off")
 
-    fig.add_artist(plt.Line2D(
+    fig.add_artist(plt.Line2D( # type: ignore
         [0.5, 0.5], [0.04, 0.96], transform=fig.transFigure,
         color=MUTED, linewidth=0.8, linestyle="--",
     ))
@@ -522,14 +526,14 @@ def mode_dual(G, pos):
         path_effects=[pe.withStroke(linewidth=3, foreground=DARK_BG)],
     )
     draw_hint(fig, compact=True, use_fig=True)
-    plt.tight_layout(pad=1.2, rect=[0, 0.015, 1, 0.97])
+    plt.tight_layout(pad=1.2, rect=[0, 0.015, 1, 0.97]) # type: ignore
 
     # Pickers sincronizados: click izq → tooltip izq + anillo der
     #                        click der → tooltip der + anillo izq
     # IMPORTANTE: guardar en variable para evitar garbage collection
     _picker_l = NodePicker(ax_l, G, pos,  radius=0.07, pair=(ax_r, ipos))
     _picker_r = NodePicker(ax_r, G, ipos, radius=0.04, pair=(ax_l, pos))
-    fig._pickers = [_picker_l, _picker_r]   # anclar al objeto figura
+    fig._pickers = [_picker_l, _picker_r]   # type: ignore # anclar al objeto figura
 
     plt.show()
 
@@ -544,7 +548,7 @@ def mode_info(G):
     zonas = Counter(d.get("zona","?") for _,d in G.nodes(data=True))
     print("\n  Nodos por zona:")
     for z,c in sorted(zonas.items()): print(f"    {z:<15} {c:>4}")
-    sf = sum(1 for _,d in G.nodes(data=True) if d.get("tiene_semaforo"))
+    sf = sum(1 for _,d in G.nodes(data=True) if d.get("semaforo"))
     print(f"\n  Con semáforo:  {sf}")
     print(f"  Sin semáforo:  {G.number_of_nodes()-sf}")
     cap = sum(d.get("capacidad",0) for _,d in G.nodes(data=True))
@@ -565,6 +569,8 @@ def mode_info(G):
 if __name__ == "__main__":
     G   = build_graph()
     arg = sys.argv[1].lower() if len(sys.argv) > 1 else "--dual"
+
+    node_position =    {node: data["pos"] for (node, data) in G.nodes(data=True)}
 
     if   arg == "--solo":    mode_solo(G, node_position)
     elif arg == "--overlay": mode_overlay(G, node_position)

@@ -28,9 +28,9 @@ def show_data(mapa):
     for n, data in mapa.nodes(data=True):
         print(
             f"{n:<40} "
-            f"{str(data.get('tiene_semaforo')):<10} "
+            f"{str(data.get('semaforo')):<10} "
             f"{data.get('zona', ''):<15} "
-            f"{data.get('vehi_presentes', 0):<10}"
+            f"{data.get('vp', 0):<10}"
         )
 
     print("\n" + " ARISTAS ".center(100, "="))

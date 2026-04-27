@@ -35,7 +35,7 @@ class Vehiculo:
             self.nodo_actual = random.choice(list(self.mapa.nodes))
             self.ruta        = self._calcular_ruta()
 
-        self.mapa.nodes[self.nodo_actual]["vehi_presentes"] += 1
+        self.mapa.nodes[self.nodo_actual]["vp"] += 1
 
     def _calcular_ruta(self):
         return nx.shortest_path(self.mapa, self.nodo_actual, self.destino, weight="weight")
@@ -75,8 +75,8 @@ class Vehiculo:
         self.nodo_actual  = siguiente
 
         with self.lock_mapa:
-            self.mapa.nodes[siguiente]["vehi_presentes"]    += 1
-            self.mapa.nodes[nodo_anterior]["vehi_presentes"] -= 1
+            self.mapa.nodes[siguiente]["vp"]    += 1
+            self.mapa.nodes[nodo_anterior]["vp"] -= 1
         sem_actual.release()
 
         if self.llego():

@@ -25,9 +25,9 @@ def render(estado):
     print(
         f"{estado['id']:<5} "
         f"{estado['velocidad']:<12} "
-        f"{estado['nodo_actual']:<35} "
-        f"{estado['destino']:<35} "
         f"{color}{estado['estado']:<12}{RESET}"
+        f"{estado['nodo_actual']:<65} "
+        f"{estado['destino']:<35} "
     )
 
 
@@ -61,7 +61,7 @@ if __name__ == "__main__":
         threads.append(t)
 
     print("\n" + " SIMULADOR DE TRÁFICO — ENCARNACIÓN ".center(110, "="))
-    print(f"{'ID':<5} {'Velocidad':<12} {'Nodo Actual':<35} {'Nodo Destino':<35} {'Estado':<12}")
+    print(f"{'ID':<5} {'Velocidad':<12} {'Estado':<12} {'Nodo Actual':<35} {'Nodo Destino':<35} ")
     print("-" * 110)
 
     fin = time.time() + DURACION_SIMULACION
