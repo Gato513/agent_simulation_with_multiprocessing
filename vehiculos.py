@@ -16,6 +16,7 @@ class Vehiculo:
         lock_mapa: Lock,
         report_queue: Queue,
         stop_event: Event,
+        proceso_id: int,
     ):
 
         self.id_vehiculo = id_vehiculo
@@ -29,6 +30,7 @@ class Vehiculo:
         self.velocidad = velocidad
         self.estado = "en_ruta"
         self.stop_event = stop_event
+        self.proceso_id = proceso_id
 
         while not self.mapa.nodes[self.nodo_actual]["semaforo"].acquire(blocking=False):
             self.nodo_actual = random.choice(list(self.mapa.nodes))
@@ -49,6 +51,7 @@ class Vehiculo:
                 "destino": self.destino,
                 "estado": self.estado,
                 "velocidad": self.velocidad,
+                "proceso_id": self.proceso_id,
             }
         )
 
@@ -86,7 +89,8 @@ class Vehiculo:
             self.estado = "llegado"
 
     def elegir_nuevo_destino(self):
-        nodos = list(self.mapa.nodes)
+        scc = max(nx.strongly_connected_components(self.mapa), key=len)
+        nodos = list(scc)  # ← solo nodos conectados
         nodos.remove(self.nodo_actual)
         self.destino = random.choice(nodos)
         self.ruta = self._calcular_ruta()
