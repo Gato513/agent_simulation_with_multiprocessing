@@ -1,5 +1,7 @@
 from threading import Thread
 from threading import Lock
+from threading import Thread as HiloMonitor
+
 
 from multiprocessing import Process
 from multiprocessing import Queue as MPQueue
@@ -14,6 +16,7 @@ import pygame
 from pygame_utils.coordinate_transform import normalized_to_screen
 from graph_model import generate_graph
 from pygame_utils.vehicle_color_palette import generar_paleta
+from system_tools.monitor_on_console import monitor_cpu
 from vehiculos import Vehiculo
 from pygame_utils.node import Node
 
@@ -48,15 +51,12 @@ def show_state_vehiculo(estado):
     )
 
 
-def vehicle_rendering(window, estado_vehiculos, node_data):
-    num_cores = min(cpu_count(), N_VEHICULOS)
-    PALETA = generar_paleta(num_cores)
-
+def vehicle_rendering(window, estado_vehiculos, node_data, paleta):
     for _, estado in estado_vehiculos.items():
         nodo_actual = estado["nodo_actual"]
         if nodo_actual in node_data:
             pid = estado.get("proceso_id", 1)
-            color = PALETA[(pid - 1) % len(PALETA)][estado["estado"]]
+            color = paleta[(pid - 1) % len(paleta)][estado["estado"]]
             pos = node_data[nodo_actual]["node_pos"]
             pygame.draw.circle(window, color, pos, 5)
 
@@ -147,12 +147,11 @@ def simular_grupo(ids_vehiculos, cola, stop_event, proceso_id):
         t.join(timeout=2)
 
 
-def start_parallel_simulation(n_vehiculos, queue, stop_event):
+def start_parallel_simulation(n_vehiculos, queue, stop_event, num_cores):
     """
     Divide la carga de vehículos proporcionalmente entre los núcleos
     disponibles. Nunca crea más procesos que vehículos.
     """
-    num_cores = min(cpu_count(), n_vehiculos)
     ids = list(range(n_vehiculos))  # [0, 1, 2, 3, 4]
 
     # Dividir la lista de IDs en num_cores grupos proporcionales donde con CPU: 2 y Vhs: 5 los grupos son [[0, 2, 4], [1, 3]]
@@ -185,23 +184,35 @@ def setup_pygame_window():
 
 
 if __name__ == "__main__":
+    # Generar paleta una sola vez — disponible para panel y vehicle_rendering
+    num_cores = min(cpu_count(), N_VEHICULOS)
+    PALETA = generar_paleta(num_cores)
+
     report_queue = MPQueue()
     stop_event = MPEvent()
     nodes, node_data = initialize_pygame_nodes()
-    procesos = start_parallel_simulation(N_VEHICULOS, report_queue, stop_event)
+    procesos = start_parallel_simulation(
+        N_VEHICULOS, report_queue, stop_event, num_cores
+    )
     window, reloj, fuente = setup_pygame_window()
+
+    info_procesos = {}
+
+    monitor = HiloMonitor(
+        target=monitor_cpu, args=(procesos, stop_event, info_procesos), daemon=True
+    )
+    monitor.start()
 
     estado_vehiculos = {}
     run = True
-    while run:
-        # Control de eventos
+
+    while run:  # ← todo adentro del while
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 run = False
 
-        # Recoleccion de los estados de los Vehiculos:
         procesados = 0
         while procesados < 50:
             try:
@@ -211,15 +222,29 @@ if __name__ == "__main__":
             except Empty:
                 break
 
-        # Renderizado de la fondo de pygame:
         window.fill((8, 11, 18))
 
         for nodo in nodes:
             nodo.draw_node(window)
 
-        # Renderizado posicion de veiculos
+        # Panel de procesos — dentro del while
+        for pid, info in info_procesos.items():
+            y = 10 + (pid - 1) * 30
+            color = PALETA[(pid - 1) % len(PALETA)]["en_ruta"]
+
+            texto = fuente.render(
+                f"P{pid} PID:{info['pid']} Núcleo:{info['nucleo']}",
+                True,
+                color,
+            )
+            window.blit(texto, (10, y))
+
+        # Vehículos — dentro del while
         vehicle_rendering(
-            estado_vehiculos=estado_vehiculos, node_data=node_data, window=window
+            window=window,
+            estado_vehiculos=estado_vehiculos,
+            node_data=node_data,
+            paleta=PALETA,
         )
 
         pygame.display.flip()
