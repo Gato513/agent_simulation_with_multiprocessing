@@ -4,6 +4,7 @@ from threading import Lock
 from multiprocessing import Process
 from multiprocessing import Queue as MPQueue
 from multiprocessing import Event as MPEvent
+from multiprocessing import cpu_count
 
 from queue import Empty
 
@@ -12,6 +13,7 @@ import random
 import pygame
 from pygame_utils.coordinate_transform import normalized_to_screen
 from graph_model import generate_graph
+from pygame_utils.vehicle_color_palette import generar_paleta
 from vehiculos import Vehiculo
 from pygame_utils.node import Node
 
@@ -24,7 +26,7 @@ from pygame_utils.constants import (
     ZONA_NODE_RADIUS,
 )
 
-N_VEHICULOS = 4
+N_VEHICULOS = 5
 
 
 def head_state_vehiculo():
@@ -47,17 +49,14 @@ def show_state_vehiculo(estado):
 
 
 def vehicle_rendering(window, estado_vehiculos, node_data):
-    # Color base por proceso
-    COLOR_PROCESO = {
-        1: {"en_ruta": "#0F9400", "esperando": "#FFFF00", "llegado": "#FF0000"},
-        2: {"en_ruta": "#FF00FF", "esperando": "#C3FF00", "llegado": "#FF0000"},
-    }
+    num_cores = min(cpu_count(), N_VEHICULOS)
+    PALETA = generar_paleta(num_cores)
 
     for _, estado in estado_vehiculos.items():
         nodo_actual = estado["nodo_actual"]
         if nodo_actual in node_data:
             pid = estado.get("proceso_id", 1)
-            color = COLOR_PROCESO[pid][estado["estado"]]
+            color = PALETA[(pid - 1) % len(PALETA)][estado["estado"]]
             pos = node_data[nodo_actual]["node_pos"]
             pygame.draw.circle(window, color, pos, 5)
 
@@ -150,23 +149,27 @@ def simular_grupo(ids_vehiculos, cola, stop_event, proceso_id):
 
 def start_parallel_simulation(n_vehiculos, queue, stop_event):
     """
-    Divide la carga de vehículos en dos procesos independientes
-    para optimizar el rendimiento de la simulación.
+    Divide la carga de vehículos proporcionalmente entre los núcleos
+    disponibles. Nunca crea más procesos que vehículos.
     """
-    ids = list(range(n_vehiculos))
-    mitad = n_vehiculos // 2
+    num_cores = min(cpu_count(), n_vehiculos)
+    ids = list(range(n_vehiculos))  # [0, 1, 2, 3, 4]
 
-    # Configuración de workers
-    p1 = Process(
-        target=simular_grupo, args=(ids[:mitad], queue, stop_event, 1), daemon=True
-    )
-    p2 = Process(
-        target=simular_grupo, args=(ids[mitad:], queue, stop_event, 2), daemon=True
-    )
+    # Dividir la lista de IDs en num_cores grupos proporcionales donde con CPU: 2 y Vhs: 5 los grupos son [[0, 2, 4], [1, 3]]
+    grupos = [ids[i::num_cores] for i in range(num_cores)]
 
-    p1.start()
-    p2.start()
-    return p1, p2
+    procesos = []
+    # P1 = (1, [0, 2, 4]) y P2 = (2, [1, 3])
+    for proceso_id, grupo in enumerate(grupos, start=1):
+        p = Process(
+            target=simular_grupo,
+            args=(grupo, queue, stop_event, proceso_id),
+            daemon=True,
+        )
+        p.start()
+        procesos.append(p)
+
+    return procesos
 
 
 def setup_pygame_window():
@@ -185,7 +188,7 @@ if __name__ == "__main__":
     report_queue = MPQueue()
     stop_event = MPEvent()
     nodes, node_data = initialize_pygame_nodes()
-    p1, p2 = start_parallel_simulation(N_VEHICULOS, report_queue, stop_event)
+    procesos = start_parallel_simulation(N_VEHICULOS, report_queue, stop_event)
     window, reloj, fuente = setup_pygame_window()
 
     estado_vehiculos = {}
@@ -198,7 +201,7 @@ if __name__ == "__main__":
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 run = False
 
-        # Receccion de datos de los hilos
+        # Recoleccion de los estados de los Vehiculos:
         procesados = 0
         while procesados < 50:
             try:
@@ -208,8 +211,8 @@ if __name__ == "__main__":
             except Empty:
                 break
 
-        # Renderizado de la simulacion:
-        window.fill((10, 10, 20))
+        # Renderizado de la fondo de pygame:
+        window.fill((8, 11, 18))
 
         for nodo in nodes:
             nodo.draw_node(window)
@@ -220,10 +223,9 @@ if __name__ == "__main__":
         )
 
         pygame.display.flip()
-
         reloj.tick(30)
 
     stop_event.set()
-    p1.join(timeout=3)
-    p2.join(timeout=3)
+    for p in procesos:
+        p.join(timeout=3)
     pygame.quit()

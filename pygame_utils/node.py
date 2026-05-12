@@ -1,5 +1,6 @@
 import pygame
 
+
 class Node:
     def __init__(
         self,
@@ -25,13 +26,10 @@ class Node:
         )
 
         for neighbor in self.neighbors:
+            # En node.py — grosor de arista
             pygame.draw.line(
-                surface=window,
-                color=self.edge_color,
-                start_pos=self.center,
-                end_pos=neighbor["pos"],
-                width=2,
-            )
+                window, self.edge_color, self.center, neighbor["pos"], 2
+            )  # grosor 2
 
     def contiene_punto(self, x: int, y: int) -> bool:
         dx = x - self.center[0]

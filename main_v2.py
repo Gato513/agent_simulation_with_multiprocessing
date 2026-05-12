@@ -51,6 +51,7 @@ if __name__ == "__main__":
             lock_mapa=lock_mapa,
             report_queue=report_queue,
             stop_event=stop_event,
+            proceso_id=0,
         )
         vehiculos.append(v)
 
