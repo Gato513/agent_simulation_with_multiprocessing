@@ -66,14 +66,14 @@ class Vehiculo:
         sem_siguiente = self.mapa.nodes[siguiente]["semaforo"]
         sem_actual = self.mapa.nodes[self.nodo_actual]["semaforo"]
 
-        while not sem_siguiente.acquire(blocking=False):
-            if self.stop_event.is_set():
-                return
-            self.estado = "esperando"
-            self.send_state()
-            time.sleep(0.5)
+        # while not sem_siguiente.acquire(blocking=False):
+        #     if self.stop_event.is_set():
+        #         return
+        #     self.estado = "esperando"
+        #     self.send_state()
+        #     time.sleep(0.5)
 
-        # sem_siguiente.acquire(blocking=False)
+        sem_siguiente.acquire(blocking=False)
 
         self.estado = "en_ruta"
         self.indice_ruta += 1
