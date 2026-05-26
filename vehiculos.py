@@ -162,14 +162,13 @@ class Vehiculo:
         # Este bloque implementa la espera activa: si el nodo siguiente está lleno,
         # el vehículo espera hasta que se libere un lugar.
         #
-        # while not sem_siguiente.acquire(blocking=False):
-        #     if self.stop_event.is_set():
-        #         return
-        #     self.estado = "esperando"
-        #     self.send_state()
-        #     time.sleep(0.5)
+        while not sem_siguiente.acquire(blocking=False):
+            if self.stop_event.is_set():
+                return
+            self.estado = "esperando"
+            self.send_state()
+            time.sleep(0.5)
 
-        sem_siguiente.acquire(blocking=False)
 
         # Mover al siguiente nodo y actualizar contadores bajo el mismo lock
         self.estado = "en_ruta"

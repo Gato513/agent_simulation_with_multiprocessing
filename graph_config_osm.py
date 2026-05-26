@@ -17,7 +17,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -27,7 +27,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -37,7 +37,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -47,7 +47,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -57,7 +57,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -67,7 +67,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -77,7 +77,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -87,7 +87,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -97,7 +97,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -107,7 +107,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -117,7 +117,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -127,7 +127,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -137,7 +137,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -147,7 +147,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -157,7 +157,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -167,7 +167,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -177,7 +177,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -187,7 +187,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -197,7 +197,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -207,7 +207,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -217,7 +217,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -227,7 +227,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -237,7 +237,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -247,7 +247,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -257,7 +257,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -267,7 +267,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -277,7 +277,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -287,7 +287,7 @@ nodes = [
             "semaforo": True,
             "zona": "comercial",
             "vp": 0,
-            "capacidad": 30,
+            "capacidad": 50,
         },
     ),
     (
@@ -297,7 +297,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -307,7 +307,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -317,7 +317,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -327,7 +327,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -337,7 +337,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -347,7 +347,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -357,7 +357,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -367,7 +367,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -377,7 +377,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -387,7 +387,7 @@ nodes = [
             "semaforo": True,
             "zona": "secundaria",
             "vp": 0,
-            "capacidad": 20,
+            "capacidad": 40,
         },
     ),
     (
@@ -397,7 +397,7 @@ nodes = [
             "semaforo": False,
             "zona": "peatonal",
             "vp": 0,
-            "capacidad": 5,
+            "capacidad": 20,
         },
     ),
     (
@@ -407,7 +407,7 @@ nodes = [
             "semaforo": False,
             "zona": "peatonal",
             "vp": 0,
-            "capacidad": 5,
+            "capacidad": 20,
         },
     ),
     (
@@ -417,7 +417,7 @@ nodes = [
             "semaforo": False,
             "zona": "peatonal",
             "vp": 0,
-            "capacidad": 5,
+            "capacidad": 20,
         },
     ),
     (
@@ -427,7 +427,7 @@ nodes = [
             "semaforo": False,
             "zona": "peatonal",
             "vp": 0,
-            "capacidad": 5,
+            "capacidad": 20,
         },
     ),
     (
@@ -437,7 +437,7 @@ nodes = [
             "semaforo": False,
             "zona": "peatonal",
             "vp": 0,
-            "capacidad": 5,
+            "capacidad": 20,
         },
     ),
     (
@@ -447,7 +447,7 @@ nodes = [
             "semaforo": False,
             "zona": "peatonal",
             "vp": 0,
-            "capacidad": 5,
+            "capacidad": 20,
         },
     ),
     (
@@ -457,7 +457,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -467,7 +467,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -477,7 +477,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -487,7 +487,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -497,7 +497,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -507,7 +507,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -517,7 +517,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -527,7 +527,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -537,7 +537,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -547,7 +547,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -557,7 +557,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -567,7 +567,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -577,7 +577,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -587,7 +587,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -597,7 +597,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -607,7 +607,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -617,7 +617,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -627,7 +627,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -637,7 +637,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -647,7 +647,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -657,7 +657,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -667,7 +667,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -677,7 +677,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -687,7 +687,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -697,7 +697,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -707,7 +707,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -717,7 +717,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -727,7 +727,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -737,7 +737,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -747,7 +747,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -757,7 +757,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -767,7 +767,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -777,7 +777,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -787,7 +787,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -797,7 +797,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -807,7 +807,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -817,7 +817,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -827,7 +827,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -837,7 +837,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -847,7 +847,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -857,7 +857,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -867,7 +867,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -877,7 +877,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -887,7 +887,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -897,7 +897,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -907,7 +907,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -917,7 +917,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -927,7 +927,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -937,7 +937,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -947,7 +947,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -957,7 +957,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -967,7 +967,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -977,7 +977,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -987,7 +987,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -997,7 +997,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1007,7 +1007,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1017,7 +1017,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1027,7 +1027,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1037,7 +1037,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1047,7 +1047,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1057,7 +1057,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1067,7 +1067,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1077,7 +1077,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1087,7 +1087,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1097,7 +1097,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1107,7 +1107,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1117,7 +1117,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1127,7 +1127,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1137,7 +1137,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1147,7 +1147,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1157,7 +1157,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1167,7 +1167,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1177,7 +1177,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1187,7 +1187,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1197,7 +1197,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1207,7 +1207,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1217,7 +1217,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1227,7 +1227,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1237,7 +1237,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1247,7 +1247,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1257,7 +1257,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1267,7 +1267,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1277,7 +1277,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1287,7 +1287,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1297,7 +1297,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1307,7 +1307,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1317,7 +1317,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1327,7 +1327,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1337,7 +1337,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1347,7 +1347,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1357,7 +1357,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1367,7 +1367,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
     (
@@ -1377,7 +1377,7 @@ nodes = [
             "semaforo": False,
             "zona": "residencial",
             "vp": 0,
-            "capacidad": 10,
+            "capacidad": 30,
         },
     ),
 ]
